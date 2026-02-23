@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website resmi Lorem Ipsum Society</title>
+    <link rel="icon" href="ChatGPT Image Feb 21, 2026, 11_54_30 PM.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+</head>
+
+<body>
+    <!-- ==================== FANTASY LOADING SCREEN ==================== -->
+    <div class="loader-container" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="ChatGPT Image Feb 21, 2026, 11_54_30 PM.png" alt="Logo">
+            </div>
+            <div class="loader-text">Lorem Ipsum</div>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== AUTH MODAL (OPTIONAL) ==================== -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal-container">
+            <!-- Close button - login is optional -->
+            <button class="modal-close" id="modalClose">✕</button>
+            <p class="modal-subtitle">Join our community of free thinkers</p>
+            
+            <div class="modal-tabs">
+                <button class="modal-tab active" data-tab="signin">Sign In</button>
+                <button class="modal-tab" data-tab="signup">Register</button>
+            </div>
+            
+            <!-- Sign In Form -->
+            <form class="modal-form active" id="signinForm">
+                <div class="form-group">
+                    <label for="signinEmail">Email</label>
+                    <input type="email" id="signinEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signinPassword">Password</label>
+                    <input type="password" id="signinPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn-submit">Sign In</button>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+                
+                <div class="social-divider">
+                    <span>or continue with</span>
+                </div>
+                
+                <div class="social-buttons">
+                    <button type="button" class="btn-social">
+                        <i class="ph ph-google-logo"></i>
+                        Google
+                    </button>
+                    <button type="button" class="btn-social">
+                        <i class="ph ph-discord-logo"></i>
+                        Discord
+                    </button>
+                </div>
+            </form>
+            
+            <!-- Register Form -->
+            <form class="modal-form" id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirm">Confirm Password</label>
+                    <input type="password" id="signupConfirm" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="btn-submit">Create Account</button>
+                
+                <div class="social-divider">
+                    <span>or continue with</span>
+                </div>
+                
+                <div class="social-buttons">
+                    <button type="button" class="btn-social">
+                        <i class="ph ph-google-logo"></i>
+                        Google
+                    </button>
+                    <button type="button" class="btn-social">
+                        <i class="ph ph-discord-logo"></i>
+                        Discord
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden until logged in) -->
+    <div id="mainContent">
+    
+    <header class="navbar animate__animated animate__fadeInDown">
+        <div class="logo">
+            <img src="ChatGPT Image Feb 21, 2026, 11_54_30 PM.png" alt="Logo" class="neon-logo">
+            <div id="menu-icon" class="menu-icon">
+            <i class="ph ph-list"></i>
+        </div>
+        </div>
+        
+        <!-- Auth Buttons -->
+        <div class="auth-buttons">
+            <a href="#" class="btn-auth btn-signin" id="openSignin">Sign In</a>
+            <a href="#" class="btn-auth btn-signup" id="openSignup">Register</a>
+        </div>
+        
+        <nav id="menu-list" class="hidden">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#admin" class="nav-link">Admin</a>
+            <a href="#member" class="nav-link">Member</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        
+    </header>
+
+    <section id="home" class="featured-box">
+        <div class="featured-text">
+            <span class="tag cormorant-garamond">Carpe Diem</span>
+            <h1>Lorem Ipsum Society</h1>
+            <p>
+                Ruang bagi orang-orang dengan pikiran bebas, terbuka, dan kritis.
+                Tempat berbagi ide tanpa batas, berdiskusi tanpa takut beda pendapat,
+                dan tumbuh bersama lewat sudut pandang yang beragam.
+                Berani berpikir, berani berbeda, tetap saling menghargai.
+            </p>
+            <a class="btn" href="#about">More Info</a>
+        </div>
+        <div class="featured-image">
+            <div class="image">
+                <img src="download.jpg" alt="Profile">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="featured-box">
+        <div class="featured-image image">
+            <img src="lorem ipsum img.jpeg" alt="">
+        </div>
+        <div class="featured-text">
+            <h1>
+            About Us
+            </h1>
+            <p>
+                Kami adalah sekumpulan siswa dari Sekolah Menengah Kejuruan Telesandi yang percaya bahwa pikiran adalah
+                ruang terbuka—luas, bebas, dan tak seharusnya dibatasi oleh dinding ketakutan. Grup ini lahir dari
+                keinginan untuk menghadirkan tempat di mana gagasan dapat tumbuh seperti benih yang disiram oleh sudut
+                pandang yang beragam. Di sini, perbedaan bukanlah jurang, melainkan jembatan untuk saling memahami. Kami
+                berdiskusi tanpa ragu, menyampaikan pendapat tanpa khawatir, dan belajar melihat dunia dari lebih dari
+                satu arah.
+            </p>
+        </div>
+    </section>
+
+    <section id="admin" class="featured-admin">
+        <div class="admin">
+            <h1>developers</h1>
+        </div>
+        <div class="featured-admin-card">
+            <div class="card-admin">
+                <div class="img-admin">
+                    <img src="kurt cobain-admin2.jpeg" alt="Admin-1">
+                </div>
+                <div class="text-admin">
+                    <h3>Rafify</h3>
+                    <p>MC Dunia Lorem Ipsum Society <br>Pertama </p>
+                </div>
+                <div class="btn-admin">
+                    <a class="btn-admin-1" href="/admin-1/index.html">About Me</a>
+                </div>
+            </div>
+            <div class="card-admin">
+                <div class="img-admin">
+                    <img src="nagumo-admin1.jpeg" alt="Admin-2">
+                </div>
+                <div class="text-admin">
+                    <h3>Maykel</h3>
+                    <p>MC Dunia Lorem Ipsum Society <br> Kedua</p>
+                </div>
+                <div class="btn-admin">
+                    <a href="/admin-2/index.html" class="btn-admin-2">About Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="players pro" class="featured-admin">
+        <div class="admin">
+            <h1>The Players PRO</h1>
+        </div>
+        <div class="featured-member-card">
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="ChillGuy.jpg" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Brandon Za Human</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            Name: Brandon
+                            <br>
+                            Hobby: Playing Game
+                            <br>
+                            Sign: Gemini
+                            <br>
+                            <br>
+                            Don't praise me, I'm only human.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 112932.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Dlee</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                        Name: Dlee <br>
+                            Hobby: Main SIM Racing <br>
+                            Sign: - <br> <br>
+                            Knows your limit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113011.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Hann</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                        Name: hanz py.js.css <br>
+                        Hobby: Main coding <br>
+                        Sign:- <br> <br>
+                        life = true <br>
+
+                        If life == true: <br>
+                        Hardwork = true <br>
+                        If hardwork == true <br>
+                        Print("succes") <br>
+                        Else: <br>
+                        Print("bull shit") <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113031.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Depin</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            No anything here
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113055.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Ibzass</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                        Name:saz <br>
+                        Hobby:low cortisol <br>
+                        Sign: - <br> <br>
+                        hari ini adalah hari manusia lahir dan  hari ini adalah hari manusia menerima kematian
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="featured-member-card">
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113114.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Sunny</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                        Name: Shiny <br>
+                        Hobby: ngocok bounty hunt <br>
+                        Sign: 🫵⚫ <br> <br>
+                        ya allah, jika jalan hidupku salah, boleh dong sesekali di sharelock
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="hacker-logo-design-a-mysterious-and-dangerous-hacker-illustration-vector.jpg" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>warning</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            Name : null <br>
+                            Hobby : ngeprompt setiap hari + coding setiap harinya <br>
+                            Sign : aries <br> <br>
+                            "nongkrong di cafe itu asik apalagi sambil nge coding"
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113238.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Nandaa</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                        Name : Nanda Goyang <br>
+                        Hobby : Tidur sama ngopi <br>
+                        Sign : Taurus <br> <br>
+                        I'm The One Who Cooks Microwave Meals
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113300.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Adzkalaii</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                        Name: Adzkalaii <br>
+                        Hobby: makan <br>
+                        Sign: avatar risol mayones <br> <br>
+                        Kapan maghrib nya woi 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113323.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>DjoJynn</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            No anything here
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="featured-member-card">
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113350.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Daunasing</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            No anything here
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113407 - Copy.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Faust</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                        Name: Aldy Maling Besi <br>
+                        Hobby: Main Burung <br>
+                        Sign: Leo <br><br>
+                        A cake is a cake even though it's a cupcake
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113427 - Copy.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Fazbeario</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            No anything here
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113456 - Copy.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Hexenta</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                        Name: Epta <br>
+                        Hobby: Musik <br>
+                        Sign: Taurus <br><br>
+                        Qoute: This is this, that is that
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113524 - Copy.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Maulanaa</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            No anything here
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="featured-member-card">
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113545 - Copy.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Miyamura</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            No anything here
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113601.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Nurcy</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            No anything here
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113618.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Revann</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            No anything here
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113634.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Rezza~</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            No anything here
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="Screenshot 2026-02-18 113655.png" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>UL</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            No anything here
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="featured-member-card">
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="WhatsApp Image 2026-02-20 at 23.02.18.jpeg" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Yerpitou</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                        Name:Ali <br>
+                        Hobby:Tidur <br>
+                        Sign: - <br> <br>
+                        Huh... y'all ain't half bad keep makin' it worth my bullet fees
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="WhatsApp Image 2026-02-20 at 23.11.40-gabriel-hd.jpeg" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Gabriell</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                        Name: Gabriell <br>
+                        Hobby: Baca buku <br>
+                        Sign: Virgo <br> <br>
+                        Do'akan usahamu. Usahakan do'amu
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="No Profil.jpg" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Kikyy</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            No anything here
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-member" style="position: relative;">
+                <div class="img-member">
+                    <img src="No Profil.jpg" alt="">
+                </div>
+                <div class="text-member">
+                    <h3>Kurniawan</h3>
+                    <div class="content">
+                        <h3>About Me</h3>
+                        <p>
+                            No anything here
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h1 class="contact-title">Contact</h1>
+        <div class="contact-container">
+            <div class="contact-box attention-box">
+                <h2>ATTENTION</h2>
+                <p>
+                    Grup ini adalah ruang bebas untuk berpikir dan berpendapat.
+                    Tidak banyak aturan, tapi tetap ada kesadaran.
+                    Bebas bukan berarti asal, dan berani bukan berarti tanpa arah.
+                    <br><br>
+                    Ada waktu untuk berani, ada waktu untuk hati-hati,
+                    dan orang bijak memahami mana yang harus dilakukan.
+                </p>
+            </div>
+            <div class="contact-join">
+                <h2>JOIN US</h2>
+                <p>
+                    Kami senang anda mengunjungi website kami.
+                    Jika anda tertarik, Anda bisa bergabung dengan kami.
+                </p>
+                <a href="https://chat.whatsapp.com/ET43rHJtoHI7IeEvcLsnYX" class="btn-join">Join Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h1>
+                    Lorem Ipsum Society
+                </h1>
+                <p>
+                    Kami senang karena anda telah mengunjungi website kami
+                </p>
+            </div>
+            <div class="list-social">
+                <div class="social-med">
+                    <i class="uil uil-envelope-edit"></i>
+                    <h2>loremipsum@gmail.com</h2>
+                </div>
+                <div class="social-med">
+                    <i class="uil uil-phone"></i>
+                    <h2>+62 812-8655-4669</h2>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    
+     <script src="script.js"></script>
+</body>
+
+</html>
